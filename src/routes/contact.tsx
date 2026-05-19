@@ -3,14 +3,18 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import { useState } from "react";
 
+const SITE_URL = "https://www.fgcarwash.com";
+
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Book Now — FG Car Wash Mobile Detailing Miami" },
-      { name: "description", content: "Schedule mobile car detailing in Miami-Dade. Call (786) 258-2326 or send us a message — we'll respond fast." },
+      { title: "Book Mobile Detailing — Miami, Broward & Keys | FG Car Wash" },
+      { name: "description", content: "Schedule mobile car detailing across Miami-Dade, Broward & Monroe County. Call or text (786) 258-2326 — open 24/7, fast reply." },
       { property: "og:title", content: "Book FG Car Wash Mobile Detailing" },
-      { property: "og:description", content: "Mobile detailing booked in minutes. Open 24/7." },
+      { property: "og:description", content: "Mobile detailing booked in minutes across South Florida. Open 24/7." },
+      { property: "og:url", content: SITE_URL + "/contact" },
     ],
+    links: [{ rel: "canonical", href: SITE_URL + "/contact" }],
   }),
   component: Contact,
 });
@@ -61,9 +65,16 @@ function Contact() {
               <MapPin className="h-5 w-5 text-primary mt-0.5" />
               <div>
                 <div className="text-xs uppercase tracking-wider text-muted-foreground">Service area</div>
-                <div className="font-semibold">Miami-Dade County</div>
+                <div className="font-semibold">Miami-Dade · Broward · Monroe</div>
               </div>
             </div>
+            <a href="mailto:fgcarwash28@gmail.com" className="flex items-start gap-3 rounded-2xl border border-border bg-card p-5 hover:border-primary transition-colors sm:col-span-2">
+              <Mail className="h-5 w-5 text-primary mt-0.5" />
+              <div>
+                <div className="text-xs uppercase tracking-wider text-muted-foreground">Email</div>
+                <div className="font-semibold">fgcarwash28@gmail.com</div>
+              </div>
+            </a>
           </div>
         </div>
 

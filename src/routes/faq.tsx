@@ -3,14 +3,18 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { HelpCircle, Phone, ArrowRight } from "lucide-react";
 
+const SITE_URL = "https://www.fgcarwash.com";
+
 export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
-      { title: "FAQ — Mobile Detailing, Ceramic Coating & Paint Decontamination | FG Car Wash Miami" },
-      { name: "description", content: "Answers about our mobile detailing process, service duration, water and power setup, ceramic coating, paint decontamination and how to prep your car before we arrive." },
+      { title: "FAQ — Mobile Detailing, Ceramic Coating & Service Areas | FG Car Wash" },
+      { name: "description", content: "Answers about our mobile detailing process, duration, water/power, ceramic coating, paint decontamination and service across Miami-Dade, Broward and the Keys." },
       { property: "og:title", content: "FAQ — FG Car Wash Mobile Detailing" },
-      { property: "og:description", content: "Process, duration, water/power, ceramic coating and paint decontamination — answered." },
+      { property: "og:description", content: "Process, duration, ceramic coating, paint decontamination and service areas — answered." },
+      { property: "og:url", content: SITE_URL + "/faq" },
     ],
+    links: [{ rel: "canonical", href: SITE_URL + "/faq" }],
   }),
   component: FAQ,
 });
