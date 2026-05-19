@@ -2,13 +2,34 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { Droplets, Car, Shield, Sparkles, Wrench, SprayCan, Check, ArrowRight, Phone } from "lucide-react";
 
+const SITE_URL = "https://www.fgcarwash.com";
+
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services & Pricing — FG Car Wash Mobile Detailing Miami" },
-      { name: "description", content: "Mobile detailing prices in Miami: full interior $120, full exterior $120, full detail $200, paint correction from $699, ceramic coating from $699, engine bay $120." },
+      { title: "Mobile Detailing Prices Miami, Broward & Keys | FG Car Wash" },
+      { name: "description", content: "Mobile detailing prices in South Florida: full interior $120, full exterior $120, full detail $200, paint correction from $699, ceramic coating from $699, engine bay $120." },
       { property: "og:title", content: "Services & Pricing — FG Car Wash Mobile Detailing" },
-      { property: "og:description", content: "Transparent mobile detailing pricing in Miami-Dade. Interior, exterior, paint correction & ceramic coating at your door." },
+      { property: "og:description", content: "Transparent mobile detailing pricing across Miami-Dade, Broward and Monroe County. At your door, 24/7." },
+      { property: "og:url", content: SITE_URL + "/services" },
+    ],
+    links: [{ rel: "canonical", href: SITE_URL + "/services" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          itemListElement: [
+            { "@type": "Service", name: "Full Interior Detailing", provider: { "@type": "LocalBusiness", name: "FG Car Wash Mobile Detailing" }, offers: { "@type": "Offer", price: "120", priceCurrency: "USD" } },
+            { "@type": "Service", name: "Full Exterior Detailing", provider: { "@type": "LocalBusiness", name: "FG Car Wash Mobile Detailing" }, offers: { "@type": "Offer", price: "120", priceCurrency: "USD" } },
+            { "@type": "Service", name: "Full Detailing (Interior + Exterior)", provider: { "@type": "LocalBusiness", name: "FG Car Wash Mobile Detailing" }, offers: { "@type": "Offer", price: "200", priceCurrency: "USD" } },
+            { "@type": "Service", name: "Paint Correction", provider: { "@type": "LocalBusiness", name: "FG Car Wash Mobile Detailing" }, offers: { "@type": "Offer", price: "699", priceCurrency: "USD", priceSpecification: { "@type": "PriceSpecification", minPrice: "699" } } },
+            { "@type": "Service", name: "Ceramic Coating", provider: { "@type": "LocalBusiness", name: "FG Car Wash Mobile Detailing" }, offers: { "@type": "Offer", price: "699", priceCurrency: "USD", priceSpecification: { "@type": "PriceSpecification", minPrice: "699" } } },
+            { "@type": "Service", name: "Engine Bay Detail", provider: { "@type": "LocalBusiness", name: "FG Car Wash Mobile Detailing" }, offers: { "@type": "Offer", price: "120", priceCurrency: "USD" } },
+          ],
+        }),
+      },
     ],
   }),
   component: Services,
