@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Phone, Clock, MapPin, Sparkles } from "lucide-react";
+import { Phone, Clock, MapPin } from "lucide-react";
+import logo from "@/assets/logo-crane.png";
 
 export function Footer() {
   return (
@@ -7,9 +8,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-14 grid gap-10 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="flex items-center gap-2">
-            <div className="grid h-9 w-9 place-items-center rounded-lg bg-[image:var(--gradient-primary)]">
-              <Sparkles className="h-5 w-5 text-primary-foreground" />
-            </div>
+            <img src={logo} alt="FG Car Wash" className="h-10 w-10 object-contain" />
             <div>
               <div className="font-bold">FG Car Wash</div>
               <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Mobile Detailing</div>
