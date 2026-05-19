@@ -61,8 +61,16 @@ const faqs = [
     a: "Yes — from compact sedans to full-size SUVs, lifted trucks, Teslas, exotics and motorcycles. Pricing scales with size and condition. For exotics and coated vehicles we use pH-neutral soaps, two-bucket wash method and soft microfiber to protect the finish.",
   },
   {
-    q: "What areas of Miami do you cover?",
-    a: "All of Miami-Dade County including Pinecrest, Coral Gables, Brickell, Coconut Grove, Doral, Kendall, Aventura, Miami Beach and Key Biscayne. Travel beyond Miami-Dade is available on request and may include a small travel fee.",
+    q: "What areas of South Florida do you cover?",
+    a: "All of Miami-Dade, Broward and Monroe County (the Florida Keys). That includes Pinecrest, Coral Gables, Brickell, Coconut Grove, Doral, Kendall, Aventura, Miami Beach, Key Biscayne, Fort Lauderdale, Hollywood, Plantation, Pembroke Pines, Coral Springs, Key Largo, Islamorada, Marathon and Key West.",
+  },
+  {
+    q: "Do you serve Fort Lauderdale and Broward County?",
+    a: "Yes — we regularly detail in Fort Lauderdale, Hollywood, Plantation, Coral Springs, Pembroke Pines and the rest of Broward County. Same pricing as Miami-Dade for sedans and standard SUVs.",
+  },
+  {
+    q: "Do you drive to the Florida Keys?",
+    a: "Yes. We service Key Largo, Tavernier, Islamorada, Marathon, Big Pine Key and Key West. A small travel fee may apply depending on location — call or text us for an exact quote.",
   },
   {
     q: "How do I pay and do you offer memberships?",
