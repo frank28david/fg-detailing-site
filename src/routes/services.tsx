@@ -117,6 +117,53 @@ function Services() {
             <Phone className="h-4 w-4" /> (786) 258-2326
           </a>
         </div>
+
+        {/* Pricing table — AI-extractable */}
+        <div className="mt-16">
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Pricing at a glance</h2>
+          <div className="mt-6 overflow-x-auto rounded-2xl border border-border bg-card">
+            <table className="w-full text-sm">
+              <thead className="bg-secondary/40 text-left">
+                <tr>
+                  <th className="px-5 py-3 font-semibold">Package</th>
+                  <th className="px-5 py-3 font-semibold">Price</th>
+                  <th className="px-5 py-3 font-semibold">Best for</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border">
+                <tr><td className="px-5 py-3">Full Interior Detailing</td><td className="px-5 py-3 font-semibold">$120</td><td className="px-5 py-3 text-muted-foreground">Daily drivers, family cars, rideshare</td></tr>
+                <tr><td className="px-5 py-3">Full Exterior Detailing</td><td className="px-5 py-3 font-semibold">$120</td><td className="px-5 py-3 text-muted-foreground">Wash, clay, wax — glossy finish</td></tr>
+                <tr><td className="px-5 py-3">Full Detail (Interior + Exterior)</td><td className="px-5 py-3 font-semibold">$200</td><td className="px-5 py-3 text-muted-foreground">Most popular — full reset</td></tr>
+                <tr><td className="px-5 py-3">Paint Correction</td><td className="px-5 py-3 font-semibold">From $699</td><td className="px-5 py-3 text-muted-foreground">Swirls, scratches, oxidation</td></tr>
+                <tr><td className="px-5 py-3">Ceramic Coating</td><td className="px-5 py-3 font-semibold">From $699</td><td className="px-5 py-3 text-muted-foreground">1–5 year hydrophobic protection</td></tr>
+                <tr><td className="px-5 py-3">Engine Bay Detail</td><td className="px-5 py-3 font-semibold">$120</td><td className="px-5 py-3 text-muted-foreground">Safe degrease + dressing</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-muted-foreground">Prices for sedans and standard SUVs. Trucks, oversized SUVs and exotics may vary — call (786) 258-2326 for an exact quote.</p>
+        </div>
+
+        {/* Service Areas */}
+        <div className="mt-16">
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Service areas across South Florida</h2>
+          <p className="mt-3 text-muted-foreground max-w-2xl">
+            We're 100% mobile and serve all of Miami-Dade, Broward and Monroe County (the Florida Keys) — 24/7.
+          </p>
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            <div className="rounded-2xl border border-border bg-card p-5">
+              <h3 className="font-semibold">Miami-Dade County</h3>
+              <p className="mt-2 text-sm text-muted-foreground">Miami, Pinecrest, Coral Gables, Brickell, Coconut Grove, Doral, Kendall, Aventura, Miami Beach, Key Biscayne, South Miami, Homestead.</p>
+            </div>
+            <div className="rounded-2xl border border-border bg-card p-5">
+              <h3 className="font-semibold">Broward County</h3>
+              <p className="mt-2 text-sm text-muted-foreground">Fort Lauderdale, Hollywood, Pembroke Pines, Coral Springs, Plantation, Davie, Pompano Beach, Sunrise, Weston, Hallandale Beach.</p>
+            </div>
+            <div className="rounded-2xl border border-border bg-card p-5">
+              <h3 className="font-semibold">Monroe County (Keys)</h3>
+              <p className="mt-2 text-sm text-muted-foreground">Key Largo, Tavernier, Islamorada, Marathon, Big Pine Key, Key West. Small travel fee may apply.</p>
+            </div>
+          </div>
+        </div>
       </section>
     </SiteLayout>
   );
