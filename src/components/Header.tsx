@@ -1,10 +1,12 @@
 import { Link } from "@tanstack/react-router";
-import { Phone, Sparkles } from "lucide-react";
+import { Phone } from "lucide-react";
 import { useState } from "react";
+import logo from "@/assets/logo-crane.png";
 
 const nav = [
   { to: "/", label: "Home" },
   { to: "/services", label: "Services" },
+  { to: "/gallery", label: "Gallery" },
   { to: "/about", label: "About" },
   { to: "/reviews", label: "Reviews" },
   { to: "/faq", label: "FAQ" },
@@ -17,9 +19,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link to="/" className="flex items-center gap-2 group">
-          <div className="grid h-9 w-9 place-items-center rounded-lg bg-[image:var(--gradient-primary)] shadow-[var(--shadow-glow)] transition-transform group-hover:scale-110">
-            <Sparkles className="h-5 w-5 text-primary-foreground" />
-          </div>
+          <img src={logo} alt="FG Car Wash" className="h-10 w-10 object-contain transition-transform group-hover:scale-110" />
           <div className="flex flex-col leading-tight">
             <span className="text-sm font-bold tracking-tight">FG Car Wash</span>
             <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Mobile Detailing</span>
@@ -30,8 +30,8 @@ export function Header() {
             <Link
               key={n.to}
               to={n.to}
-              className="rounded-full px-4 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
-              activeProps={{ className: "rounded-full px-4 py-2 text-sm text-foreground bg-secondary" }}
+              className="rounded-full px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+              activeProps={{ className: "rounded-full px-3 py-2 text-sm text-foreground bg-secondary" }}
               activeOptions={{ exact: true }}
             >
               {n.label}
