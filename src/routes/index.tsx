@@ -10,15 +10,20 @@ import porsche from "@/assets/gallery-porsche.jpg";
 import sf90 from "@/assets/gallery-sf90.jpg";
 import bmw from "@/assets/gallery-bmw.jpg";
 
+const SITE_URL = "https://www.fgcarwash.com";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "FG Car Wash Mobile Detailing — Premium Miami Detailing" },
-      { name: "description", content: "5-star rated mobile car detailing in Miami-Dade. Interior $120, exterior $120, full detail $200, paint correction & ceramic coating from $699. At your home or office, 24/7." },
-      { property: "og:title", content: "FG Car Wash Mobile Detailing — Miami" },
-      { property: "og:description", content: "Showroom-quality detailing brought to your driveway. Book at (786) 258-2326." },
-      { property: "og:image", content: poster },
+      { title: "FG Car Wash Mobile Detailing — 24/7 Miami, Broward & Keys" },
+      { name: "description", content: "5-star mobile car detailing serving Miami-Dade, Broward & Monroe County. Interior $120, exterior $120, full detail $200, ceramic coating from $699. At your door, 24/7." },
+      { property: "og:title", content: "FG Car Wash Mobile Detailing — 24/7 South Florida" },
+      { property: "og:description", content: "Showroom-quality detailing brought to your driveway across Miami-Dade, Broward & the Keys. Book at (786) 258-2326." },
+      { property: "og:url", content: SITE_URL + "/" },
+      { property: "og:image", content: SITE_URL + poster },
+      { name: "twitter:image", content: SITE_URL + poster },
     ],
+    links: [{ rel: "canonical", href: SITE_URL + "/" }],
   }),
   component: Index,
 });
@@ -60,6 +65,9 @@ function Index() {
           <p className="mt-6 max-w-xl text-lg text-muted-foreground">
             Interior detailing, exterior wash, paint correction and ceramic coating.
             We bring the showroom finish to your home or office, 24/7.
+          </p>
+          <p className="mt-3 text-sm font-medium text-foreground/80">
+            Serving Miami-Dade · Broward · Monroe County (Florida Keys) — 24/7 mobile service.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-glow)] transition-transform hover:scale-105">

@@ -3,13 +3,31 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { Award, Heart, MapPin, Sparkles } from "lucide-react";
 import hero from "@/assets/gallery-shop-lineup.jpg";
 
+const SITE_URL = "https://www.fgcarwash.com";
+
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — FG Car Wash Mobile Detailing Miami" },
-      { name: "description", content: "Family-owned mobile detailing serving Miami-Dade. Meet the team behind FG Car Wash and the values that earned 131 five-star reviews." },
+      { title: "About FG Car Wash — Family-Owned Mobile Detailing in South Florida" },
+      { name: "description", content: "Family-owned mobile detailing serving Miami-Dade, Broward & Monroe County. Meet the team behind FG Car Wash — 131 five-star reviews and counting." },
       { property: "og:title", content: "About FG Car Wash Mobile Detailing" },
-      { property: "og:description", content: "Miami-grown, customer-obsessed mobile detailing." },
+      { property: "og:description", content: "Miami-grown, customer-obsessed mobile detailing across South Florida." },
+      { property: "og:url", content: SITE_URL + "/about" },
+      { property: "og:image", content: SITE_URL + hero },
+    ],
+    links: [{ rel: "canonical", href: SITE_URL + "/about" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL + "/" },
+            { "@type": "ListItem", position: 2, name: "About", item: SITE_URL + "/about" },
+          ],
+        }),
+      },
     ],
   }),
   component: About,

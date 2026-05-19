@@ -9,6 +9,52 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import logoCrane from "@/assets/logo-crane.png";
+
+const SITE_URL = "https://www.fgcarwash.com";
+
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "AutoDetailing"],
+  "@id": `${SITE_URL}#business`,
+  name: "FG Car Wash Mobile Detailing",
+  image: `${SITE_URL}/og-image.jpg`,
+  logo: `${SITE_URL}${logoCrane}`,
+  url: SITE_URL,
+  telephone: "+1-786-258-2326",
+  email: "fgcarwash28@gmail.com",
+  priceRange: "$$",
+  description:
+    "Premium 24/7 mobile car detailing serving Miami-Dade, Broward and Monroe counties. Interior, exterior, paint correction and ceramic coating at your home or office.",
+  areaServed: [
+    { "@type": "AdministrativeArea", name: "Miami-Dade County, FL" },
+    { "@type": "AdministrativeArea", name: "Broward County, FL" },
+    { "@type": "AdministrativeArea", name: "Monroe County, FL" },
+  ],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Miami",
+    addressRegion: "FL",
+    addressCountry: "US",
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      opens: "00:00",
+      closes: "23:59",
+    },
+  ],
+  sameAs: [
+    "https://www.instagram.com/fg_car_wash_mobile_detailing",
+    "https://www.yelp.com/biz/fg-car-wash-south-miami",
+  ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5.0",
+    reviewCount: "131",
+  },
+};
 
 function NotFoundComponent() {
   return (
@@ -72,20 +118,31 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "FG Car Wash Mobile Detailing — 24/7 Miami, Broward & Keys" },
+      {
+        name: "description",
+        content:
+          "Premium mobile car detailing serving Miami-Dade, Broward & Monroe County 24/7. Interior, exterior, paint correction & ceramic coating brought to your driveway.",
+      },
+      { name: "author", content: "FG Car Wash Mobile Detailing" },
+      { name: "keywords", content: "mobile detailing Miami, ceramic coating Miami, paint correction Miami, car wash Broward, mobile detailing Fort Lauderdale, mobile detailing Key Largo, FG Car Wash" },
+      { property: "og:site_name", content: "FG Car Wash Mobile Detailing" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { property: "og:locale", content: "en_US" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "theme-color", content: "#0a0a0a" },
+      { name: "geo.region", content: "US-FL" },
+      { name: "geo.placename", content: "Miami" },
     ],
     links: [
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: logoCrane, type: "image/png" },
+      { rel: "apple-touch-icon", href: logoCrane },
+      { rel: "stylesheet", href: appCss },
+    ],
+    scripts: [
       {
-        rel: "stylesheet",
-        href: appCss,
+        type: "application/ld+json",
+        children: JSON.stringify(localBusinessJsonLd),
       },
     ],
   }),

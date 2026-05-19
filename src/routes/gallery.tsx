@@ -10,14 +10,30 @@ import sf90 from "@/assets/gallery-sf90.jpg";
 import lineup from "@/assets/gallery-shop-lineup.jpg";
 import bmw from "@/assets/gallery-bmw.jpg";
 
+const SITE_URL = "https://www.fgcarwash.com";
+
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Gallery — FG Car Wash Mobile Detailing Miami" },
-      { name: "description", content: "Recent detailing work from FG Car Wash in Miami — Aston Martin, Lamborghini, Porsche GT3, Ferrari F8 & SF90, BMW and more." },
-      { property: "og:title", content: "Gallery — FG Car Wash" },
-      { property: "og:description", content: "Real cars, real results. See our recent ceramic coatings, paint corrections and full details." },
-      { property: "og:image", content: aston },
+      { title: "Gallery — Ceramic Coating & Detailing Work in Miami | FG Car Wash" },
+      { name: "description", content: "Recent mobile detailing work from FG Car Wash across Miami — Aston Martin, Lamborghini, Porsche GT3, Ferrari F8 & SF90, BMW and daily drivers." },
+      { property: "og:title", content: "FG Car Wash Detailing Gallery — Miami" },
+      { property: "og:description", content: "Real cars, real results. Recent ceramic coatings, paint corrections and full details." },
+      { property: "og:url", content: SITE_URL + "/gallery" },
+      { property: "og:image", content: SITE_URL + aston },
+      { name: "twitter:image", content: SITE_URL + aston },
+    ],
+    links: [{ rel: "canonical", href: SITE_URL + "/gallery" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ImageGallery",
+          name: "FG Car Wash Mobile Detailing — Recent Work",
+          url: SITE_URL + "/gallery",
+        }),
+      },
     ],
   }),
   component: Gallery,

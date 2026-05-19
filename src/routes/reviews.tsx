@@ -2,13 +2,39 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { Star, ArrowRight } from "lucide-react";
 
+const SITE_URL = "https://www.fgcarwash.com";
+
 export const Route = createFileRoute("/reviews")({
   head: () => ({
     meta: [
-      { title: "Reviews — FG Car Wash Mobile Detailing" },
-      { name: "description", content: "Read real 5-star Google reviews from FG Car Wash Mobile Detailing customers across Miami-Dade." },
-      { property: "og:title", content: "Reviews — FG Car Wash Mobile Detailing" },
-      { property: "og:description", content: "131 five-star reviews. Here's what Miami says about us." },
+      { title: "Reviews — 5.0 ★ from 131 Customers | FG Car Wash Miami" },
+      { name: "description", content: "Read real 5-star Google reviews from FG Car Wash Mobile Detailing customers across Miami-Dade, Broward and the Florida Keys." },
+      { property: "og:title", content: "FG Car Wash Reviews — 5.0 from 131 customers" },
+      { property: "og:description", content: "131 five-star reviews from South Florida drivers. Here's what they say about us." },
+      { property: "og:url", content: SITE_URL + "/reviews" },
+    ],
+    links: [{ rel: "canonical", href: SITE_URL + "/reviews" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "FG Car Wash Mobile Detailing",
+          url: SITE_URL,
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "5.0",
+            reviewCount: "131",
+            bestRating: "5",
+          },
+          review: [
+            { "@type": "Review", author: { "@type": "Person", name: "Janaina" }, reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" }, reviewBody: "THE BEST FG CAR WASH MOBILE DETAILING IN PINECREST! Premium results, professional team, worth every penny." },
+            { "@type": "Review", author: { "@type": "Person", name: "L C" }, reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" }, reviewBody: "Amazing service and prices. Quick response and easy to schedule from home. 10/10 recommend." },
+            { "@type": "Review", author: { "@type": "Person", name: "Candy" }, reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" }, reviewBody: "My car is super clean! Frank responded quickly and Andy did an amazing job, even got stains out of the passenger seat." },
+          ],
+        }),
+      },
     ],
   }),
   component: Reviews,
