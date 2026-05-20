@@ -139,12 +139,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "apple-touch-icon", href: logoCrane },
       { rel: "stylesheet", href: appCss },
     ],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify(localBusinessJsonLd),
-      },
-    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
