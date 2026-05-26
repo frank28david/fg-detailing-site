@@ -49,7 +49,7 @@ const tiers = [
   {
     icon: Sparkles, name: "Full Detailing (Inside + Out)", price: "$200",
     desc: "Our most popular package — full interior + full exterior in one visit.",
-    includes: ["Everything in Interior", "Everything in Exterior", "Steam-cleaned interior", "Clay & wax exterior", "Showroom-ready finish"],
+    includes: ["Everything in Interior", "Everything in Exterior", "Steam-cleaned interior", "Hydrophobic protection", "Showroom-ready finish"],
     featured: true,
   },
   {
