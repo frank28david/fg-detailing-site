@@ -57,7 +57,7 @@ function Index() {
             <span className="flex items-center gap-0.5 text-accent">
               {[...Array(5)].map((_, i) => <Star key={i} className="h-3 w-3 fill-current" />)}
             </span>
-            <span className="text-muted-foreground">5.0 · 131 Google reviews</span>
+            <span className="text-muted-foreground">5.0 · 140 Google reviews</span>
           </div>
           <h1 className="mt-6 max-w-3xl text-5xl md:text-7xl font-bold tracking-tight leading-[1.05]">
             Miami's premium <span className="bg-[image:var(--gradient-primary)] bg-clip-text text-transparent">mobile detailing</span> — at your door.
@@ -185,7 +185,7 @@ function Index() {
         </p>
         <div className="mt-6 text-sm text-muted-foreground">— Candy, Google Review</div>
         <Link to="/reviews" className="mt-8 inline-flex items-center gap-2 text-sm text-primary hover:underline">
-          Read all 131 reviews <ArrowRight className="h-4 w-4" />
+          Read all 140 reviews <ArrowRight className="h-4 w-4" />
         </Link>
       </section>
 
