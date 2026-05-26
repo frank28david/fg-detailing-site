@@ -9,6 +9,15 @@ import ferrari from "@/assets/gallery-ferrari-f8.jpg";
 import sf90 from "@/assets/gallery-sf90.jpg";
 import lineup from "@/assets/gallery-shop-lineup.jpg";
 import bmw from "@/assets/gallery-bmw.jpg";
+import alfa from "@/assets/gallery-alfa-romeo-giulia-quadrifoglio.jpg";
+import escalade from "@/assets/gallery-cadillac-escalade-black.jpg";
+import cadillac59 from "@/assets/gallery-cadillac-1959-classic.jpg";
+import corvette from "@/assets/gallery-corvette-c8-white.jpg";
+import rangeRover from "@/assets/gallery-range-rover-sport.jpg";
+import golfGti from "@/assets/gallery-vw-golf-gti.jpg";
+import urus from "@/assets/gallery-lamborghini-urus-blue.jpg";
+import tesla from "@/assets/gallery-tesla-model3-interior.jpg";
+import murakami from "@/assets/gallery-lamborghini-murakami-wrap.jpg";
 
 const SITE_URL = "https://www.fgcarwash.com";
 
@@ -40,14 +49,23 @@ export const Route = createFileRoute("/gallery")({
 });
 
 const photos = [
-  { src: aston, alt: "Aston Martin DB11 exterior detail Miami", tall: true },
-  { src: lambo, alt: "Lamborghini Huracán EVO Spyder detail" },
-  { src: porsche, alt: "Porsche 911 GT3 ceramic coating" },
-  { src: astonInt, alt: "Aston Martin DB11 tan leather interior detail", tall: true },
-  { src: ferrari, alt: "Ferrari F8 Spider with carbon details" },
-  { src: sf90, alt: "Ferrari SF90 Stradale in red" },
-  { src: lineup, alt: "Exotic car lineup at FG Car Wash Miami shop", tall: true },
-  { src: bmw, alt: "BMW 3 Series black exterior detail" },
+  { src: aston, alt: "Aston Martin DB11 mobile detailing and ceramic coating Miami", tall: true },
+  { src: lambo, alt: "Lamborghini Huracán EVO Spyder paint correction Miami-Dade" },
+  { src: porsche, alt: "Porsche 911 GT3 ceramic coating Coral Gables Miami" },
+  { src: astonInt, alt: "Aston Martin DB11 tan leather interior detailing Miami", tall: true },
+  { src: ferrari, alt: "Ferrari F8 Spider full detail and ceramic coating Miami Beach" },
+  { src: sf90, alt: "Ferrari SF90 Stradale exotic car detailing Miami" },
+  { src: lineup, alt: "Exotic car lineup at FG Car Wash mobile detailing shop Miami", tall: true },
+  { src: bmw, alt: "BMW 3 Series black exterior mobile detail Pinecrest Miami" },
+  { src: alfa, alt: "Alfa Romeo Giulia Quadrifoglio green ceramic coating Miami detailing studio", tall: true },
+  { src: escalade, alt: "Cadillac Escalade black SUV mobile detailing and paint protection Miami" },
+  { src: cadillac59, alt: "1959 Cadillac classic car detailing and paint restoration Miami" },
+  { src: corvette, alt: "Chevrolet Corvette C8 white exterior detail and ceramic coating Florida Keys" },
+  { src: rangeRover, alt: "Range Rover Sport mobile detailing and hydrophobic protection Miami", tall: true },
+  { src: golfGti, alt: "Volkswagen Golf GTI exterior detail Brickell Miami" },
+  { src: urus, alt: "Lamborghini Urus blue SUV ceramic coating Miami exotic detailing" },
+  { src: tesla, alt: "Tesla Model 3 white interior deep cleaning and detailing Miami", tall: true },
+  { src: murakami, alt: "Lamborghini Huracán Murakami art wrap detailing Miami" },
 ];
 
 function Gallery() {
