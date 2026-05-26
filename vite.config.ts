@@ -1,17 +1,18 @@
 import { defineConfig } from "vite";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
+import { nitro } from "nitro/vite";
 import viteReact from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import tsConfigPaths from "vite-tsconfig-paths";
 
-// Vercel SSR deployment for TanStack Start.
-// The `target: "vercel"` option produces a .vercel/output build that Vercel
-// auto-detects and serves as a serverless SSR app — no extra adapter needed.
+// TanStack Start + Nitro deployment for Vercel.
+// Vercel auto-detects the Nitro output and runs the app as SSR functions.
 export default defineConfig({
   plugins: [
     tsConfigPaths(),
     tailwindcss(),
-    tanstackStart({ target: "vercel" }),
+    tanstackStart(),
+    nitro(),
     viteReact(),
   ],
   server: {
