@@ -7,10 +7,10 @@ const SITE_URL = "https://www.fgcarwash.com";
 export const Route = createFileRoute("/reviews")({
   head: () => ({
     meta: [
-      { title: "Reviews — 5.0 ★ from 131 Customers | FG Car Wash Miami" },
+      { title: "Reviews — 5.0 ★ from 140 Customers | FG Car Wash Miami" },
       { name: "description", content: "Read real 5-star Google reviews from FG Car Wash Mobile Detailing customers across Miami-Dade, Broward and the Florida Keys." },
-      { property: "og:title", content: "FG Car Wash Reviews — 5.0 from 131 customers" },
-      { property: "og:description", content: "131 five-star reviews from South Florida drivers. Here's what they say about us." },
+      { property: "og:title", content: "FG Car Wash Reviews — 5.0 from 140 customers" },
+      { property: "og:description", content: "140 five-star reviews from South Florida drivers. Here's what they say about us." },
       { property: "og:url", content: SITE_URL + "/reviews" },
     ],
     links: [{ rel: "canonical", href: SITE_URL + "/reviews" }],
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/reviews")({
           aggregateRating: {
             "@type": "AggregateRating",
             ratingValue: "5.0",
-            reviewCount: "131",
+            reviewCount: "140",
             bestRating: "5",
           },
           review: [
@@ -69,7 +69,7 @@ function Reviews() {
           <span className="text-muted-foreground">Google verified</span>
         </div>
         <h1 className="mt-6 text-5xl md:text-7xl font-bold tracking-tight">
-          <span className="bg-[image:var(--gradient-primary)] bg-clip-text text-transparent">5.0</span> from 131 reviews
+          <span className="bg-[image:var(--gradient-primary)] bg-clip-text text-transparent">5.0</span> from 140 reviews
         </h1>
         <p className="mt-5 text-muted-foreground max-w-xl mx-auto">
           A few words from Miami drivers who let us take care of their cars.

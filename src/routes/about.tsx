@@ -9,7 +9,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About FG Car Wash — Family-Owned Mobile Detailing in South Florida" },
-      { name: "description", content: "Family-owned mobile detailing serving Miami-Dade, Broward & Monroe County. Meet the team behind FG Car Wash — 131 five-star reviews and counting." },
+      { name: "description", content: "Family-owned mobile detailing serving Miami-Dade, Broward & Monroe County. Meet the team behind FG Car Wash — 140 five-star reviews and counting." },
       { property: "og:title", content: "About FG Car Wash Mobile Detailing" },
       { property: "og:description", content: "Miami-grown, customer-obsessed mobile detailing across South Florida." },
       { property: "og:url", content: SITE_URL + "/about" },
@@ -57,7 +57,7 @@ function About() {
 
       <section className="mx-auto max-w-7xl px-6 py-16 grid gap-6 md:grid-cols-3">
         {[
-          { icon: Award, title: "5.0 ★ rated", desc: "131 verified Google reviews from Miami clients who keep coming back." },
+          { icon: Award, title: "5.0 ★ rated", desc: "140 verified Google reviews from Miami clients who keep coming back." },
           { icon: MapPin, title: "Fully mobile", desc: "We come to your home or office anywhere in Miami-Dade, 24/7." },
           { icon: Heart, title: "People first", desc: "LGBTQ+ friendly, transparent, and respectful of your time and property." },
         ].map((v) => (

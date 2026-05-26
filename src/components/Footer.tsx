@@ -20,7 +20,7 @@ export function Footer() {
           </p>
           <div className="mt-4 flex flex-wrap items-center gap-3">
             <div className="inline-flex items-center gap-2 rounded-full bg-secondary px-3 py-1 text-xs">
-              <span className="h-2 w-2 rounded-full bg-accent" /> 5.0 ★ · 131 Google Reviews
+              <span className="h-2 w-2 rounded-full bg-accent" /> 5.0 ★ · 140 Google Reviews
             </div>
             <a
               href="https://www.instagram.com/fg_car_wash_mobile_detailing"
